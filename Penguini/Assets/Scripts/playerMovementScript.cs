@@ -8,11 +8,13 @@ public class playerMovementScript : MonoBehaviour
     public KeyCode sprintKey = KeyCode.LeftShift;
     public float walkStepRate = .8f;
     public float sprintStepRate = .95f;
+    public float maxNewStepSpeed = .4f;
     
     // Get Sprint key and set speed modifier's effect
     private float sprintValue;
     Rigidbody2D m_Rigidbody;
     private AudioSource footstepsSource;
+    public float stepTimeout = 0f;
 
     // Initialize Animator
     private Animator _animator;
@@ -30,6 +32,7 @@ public class playerMovementScript : MonoBehaviour
     }
     void FixedUpdate()
     {
+        // 
 
         // Set animation to walking state if character is moving in any direction
         _animator.SetBool(name:"IsWalking", (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0));
@@ -45,8 +48,14 @@ public class playerMovementScript : MonoBehaviour
             footstepsSource.pitch = walkStepRate;
         }
         
-        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) {
+        // Control steps and stop rapid fire SFX
+        stepTimeout -= Time.deltaTime;
+        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) && stepTimeout <= 0f) {
             footstepsSource.enabled = true;
+            stepTimeout = maxNewStepSpeed;
+        }
+        else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) {
+
         }
         else {
             footstepsSource.enabled = false;
@@ -55,5 +64,6 @@ public class playerMovementScript : MonoBehaviour
         //Basic 360 degree movement, should work for what we need.
         Vector3 movementInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         m_Rigidbody.MovePosition(transform.position + movementInput.normalized* moveSpeed * sprintValue * Time.deltaTime);
+
     }
 }
