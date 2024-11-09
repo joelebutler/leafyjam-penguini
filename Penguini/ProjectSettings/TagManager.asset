@@ -12,8 +12,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Penguini
+  - Collider
   - 
   - 
   - 
@@ -41,6 +41,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Penguini
+    uniqueID: 4081700665
+    locked: 0
+  - name: Trees
+    uniqueID: 974105077
+    locked: 0
+  - name: Collider
+    uniqueID: 3917505051
     locked: 0
   m_RenderingLayers:
   - Default

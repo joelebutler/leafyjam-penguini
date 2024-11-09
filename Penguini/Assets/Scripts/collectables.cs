@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class collectables : MonoBehaviour
 {
-    private basicFunction basicFunctionScript;
+    private playerMovementScript playerMovementScript;
     public int resourceID = 1; //Apple = 1, Pumpkin = 2, Fish = 3
 
     void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        basicFunctionScript = player.GetComponent<basicFunction>();
+        playerMovementScript = player.GetComponent<playerMovementScript>();
     }
 
 
@@ -20,20 +20,20 @@ public class collectables : MonoBehaviour
             switch (resourceID)
             {
                 case 1:
-                    basicFunctionScript.apples += 1;
-                    Debug.Log("You now have " + basicFunctionScript.apples + " apples.");
+                    playerMovementScript.apples += 1;
+                    Debug.Log("You now have " + playerMovementScript.apples + " apples.");
                     Destroy(gameObject);
                     break;
 
                 case 2:
-                    basicFunctionScript.pumpkins += 1;
-                    Debug.Log("You now have " + basicFunctionScript.pumpkins + " pumpkins.");
+                    playerMovementScript.pumpkins += 1;
+                    Debug.Log("You now have " + playerMovementScript.pumpkins + " pumpkins.");
                     Destroy(gameObject);
                     break;
                 
                 case 3:
-                    basicFunctionScript.fish += 1;
-                    Debug.Log("You now have " + basicFunctionScript.fish + " fish.");
+                    playerMovementScript.fish += 1;
+                    Debug.Log("You now have " + playerMovementScript.fish + " fish.");
                     Destroy(gameObject);
                     break;
 
