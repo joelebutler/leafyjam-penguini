@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Penguini_Feet_0: 5240554700528985232
+      Penguini_Feet_1: 4563378537036053333
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

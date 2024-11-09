@@ -6,10 +6,13 @@ public class playerMovementScript : MonoBehaviour
     public float moveSpeed = 4;
     public float sprintModifier = 2;
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public float walkStepRate = .8f;
+    public float sprintStepRate = .95f;
     
     // Get Sprint key and set speed modifier's effect
     private float sprintValue;
     Rigidbody2D m_Rigidbody;
+    private AudioSource footstepsSource;
 
     // Initialize Animator
     private Animator _animator;
@@ -22,6 +25,8 @@ public class playerMovementScript : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        footstepsSource = GetComponent<AudioSource>();
+        footstepsSource.enabled = false;
     }
     void FixedUpdate()
     {
@@ -33,9 +38,18 @@ public class playerMovementScript : MonoBehaviour
 
         if (Input.GetKey(sprintKey)) {
             sprintValue = sprintModifier;
+            footstepsSource.pitch = sprintStepRate;
         }
         else {
             sprintValue = 1;
+            footstepsSource.pitch = walkStepRate;
+        }
+        
+        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) {
+            footstepsSource.enabled = true;
+        }
+        else {
+            footstepsSource.enabled = false;
         }
 
         //Basic 360 degree movement, should work for what we need.
