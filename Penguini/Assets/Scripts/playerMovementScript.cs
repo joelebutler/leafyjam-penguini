@@ -20,7 +20,7 @@ public class playerMovementScript : MonoBehaviour
     private Animator _animator;
 
     // Resource Count. Might be wise to change this to be a part of a global manager so it is better accessable, but in interest of time, I put here.
-    public int apples = 0, pumpkins = 0, fish = 0;
+    public int apples = 0, pumpkins = 0, fish = 0, carrots = 0;
 
 
     void Start()

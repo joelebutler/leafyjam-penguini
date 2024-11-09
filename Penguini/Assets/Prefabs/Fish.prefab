@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5459527065930590793}
   - component: {fileID: 7638455404759410553}
   - component: {fileID: 279675079102727959}
-  - component: {fileID: 251410895838271033}
+  - component: {fileID: 9109177620550034278}
   m_Layer: 0
-  m_Name: Carrot
+  m_Name: Fish
   m_TagString: Pumpkin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290431532024726701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.34775376, w: 0.93758595}
   m_LocalPosition: {x: 1.129, y: 0.476, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.7}
 --- !u!212 &5459527065930590793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -79,9 +79,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3410439384014351281, guid: 35fe82329b5bdc346af687a13e955df6, type: 3}
+  m_Sprite: {fileID: -3739957133524300147, guid: 175ebf5aa5a2ff14ab8acc8afba61818, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1029187ee6d3701478612f9a6f6ef152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceID: 4
---- !u!82 &251410895838271033
+  resourceID: 3
+--- !u!82 &9109177620550034278
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
