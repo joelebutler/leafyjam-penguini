@@ -52,5 +52,8 @@ TagManager:
   - name: Collider
     uniqueID: 3917505051
     locked: 0
+  - name: Silhouette man
+    uniqueID: 2875496343
+    locked: 0
   m_RenderingLayers:
   - Default
