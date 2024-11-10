@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - Pumpkin
   - Destination
+  - Apple
   layers:
   - Default
   - TransparentFX
