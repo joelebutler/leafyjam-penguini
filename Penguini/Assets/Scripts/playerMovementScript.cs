@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class playerMovementScript : MonoBehaviour
@@ -9,6 +10,8 @@ public class playerMovementScript : MonoBehaviour
     public float walkStepRate = .8f;
     public float sprintStepRate = .95f;
     public float maxNewStepSpeed = .4f;
+
+    public TextMeshProUGUI pump, appl, fsh, carr;
     
     // Get Sprint key and set speed modifier's effect
     private float sprintValue;
@@ -64,6 +67,11 @@ public class playerMovementScript : MonoBehaviour
         //Basic 360 degree movement, should work for what we need.
         Vector3 movementInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         m_Rigidbody.MovePosition(transform.position + movementInput.normalized* moveSpeed * sprintValue * Time.deltaTime);
+
+        pump.text = pumpkins.ToString();
+        appl.text = apples.ToString();
+        fsh.text = fish.ToString();
+        carr.text = carrots.ToString();
 
     }
 }

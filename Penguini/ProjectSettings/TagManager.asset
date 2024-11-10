@@ -8,6 +8,7 @@ TagManager:
   - Pumpkin
   - Destination
   - Apple
+  - Fish
   layers:
   - Default
   - TransparentFX

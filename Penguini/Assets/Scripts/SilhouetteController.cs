@@ -2,51 +2,38 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
+using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class SilhouetteController : MonoBehaviour
 {
-    public int minAsk, maxAsk, randAsk, item1Amount, item2Amount, item3Amount, item4Amount, decidedIndex;
+    public int minAsk, maxAsk, item1Amount, item2Amount, item3Amount, item4Amount, decidedIndex;
+    public TextMeshProUGUI orderedPumpkins, orderedApples, orderedFish, orderedCarrots;
 
-    void Awake()
+    void Start()
     {
         GenerateOrder();
-        Debug.Log(item1Amount + " " + item2Amount + " " + item3Amount + " " + item4Amount);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GenerateOrder();
-        }
+        return;
     }
 
     public void GenerateOrder()
     {
-        for (int i = decidedIndex; i < 3; i++)
-        {
-            randAsk = UnityEngine.Random.Range(minAsk, maxAsk);
-            switch (decidedIndex)
-            {
-                case 0:
-                    item1Amount = randAsk;
-                    break;
-                case 1:
-                    item2Amount = randAsk;
-                    break;
-                case 2:
-                    item3Amount = randAsk;
-                    break;
-                case 3:
-                    item4Amount = randAsk;
-                    break;
-                default:
-                    break;
-            }
-        }
+        item1Amount = UnityEngine.Random.Range(minAsk, maxAsk);
+            orderedPumpkins.text = item1Amount.ToString();
+        item2Amount = UnityEngine.Random.Range(minAsk, maxAsk);
+            orderedApples.text = item2Amount.ToString();
+        item3Amount = UnityEngine.Random.Range(minAsk, maxAsk);
+            orderedFish.text = item3Amount.ToString();
+        item4Amount = UnityEngine.Random.Range(minAsk, maxAsk);
+            orderedCarrots.text = item4Amount.ToString();
     }
 }
