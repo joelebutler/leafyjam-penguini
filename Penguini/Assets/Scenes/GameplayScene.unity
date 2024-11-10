@@ -1176,11 +1176,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1
---- !u!1 &221940125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 429202201732432425, guid: 594847be5a6004130bd3500a9585fb7d, type: 3}
-  m_PrefabInstance: {fileID: 1517656365}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &230770915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1325,11 +1320,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &296220923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2288230485178089962, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
-  m_PrefabInstance: {fileID: 2081170832082322989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &364520140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3558841145062441527, guid: dcb2c004e9e254be5806c226390ac121, type: 3}
@@ -7315,8 +7305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3558b7ee52bf541b0b4bfbee1f02cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 296220923}
-  shadow: {fileID: 221940125}
 --- !u!1001 &2081170832082322989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7327,11 +7315,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.5
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.09
+      value: -12.8
       objectReference: {fileID: 0}
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.z
