@@ -1,8 +1,21 @@
-This "game" was meant to be much more, but we couldn't finish it within the deadline.
+# Penguini
 
-Our first game project as a team and as developers.
+Our submission for [LeafyJam](https://itch.io/jam/leafyjam)  -- our first game jam ever. 
 
-Made for Leafy Jam 2024 on Itch.io by these people:
-  Joel (Programming and Sound)
-  Jarek (Programming)
-  Roman (Art)
+Made in Unity, an engine we'd never used.
+
+## Gameplay
+
+Walk around, collect pumpkins, apples, carrots and fish!
+
+Get yelled at by the shadow man trying to steal your crops!
+
+See how many items you're willing to collect!
+
+
+## Authors
+
+- Roman Contesti (Illustration)
+- [@BeeeSoup](https://github.com/BeeeSoup) (Design & Development)
+- [@joelebutler](https://github.com/joelebutler) (Music/SFX, Design & Development)
+
