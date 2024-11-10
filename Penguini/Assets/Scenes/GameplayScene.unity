@@ -7337,6 +7337,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2895062382249939957, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
+      propertyPath: fsh
+      value: 
+      objectReference: {fileID: 1040857641}
+    - target: {fileID: 2895062382249939957, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
+      propertyPath: appl
+      value: 
+      objectReference: {fileID: 468499824}
+    - target: {fileID: 2895062382249939957, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
+      propertyPath: carr
+      value: 
+      objectReference: {fileID: 1411505670}
+    - target: {fileID: 2895062382249939957, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
+      propertyPath: pump
+      value: 
+      objectReference: {fileID: 1721308162}
     - target: {fileID: 8325712459706616373, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_SortingLayer
       value: 0

@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishSpeed: 0.5
+  timeLived: 0
   resourceID: 1
 --- !u!82 &1922164871453645724
 AudioSource:
