@@ -8,6 +8,7 @@ public class collectables : MonoBehaviour
     private GameObject fishDestination;
     private AudioSource popSFXPlayer;
     public float fishSpeed = 0.5f;
+    public float timeLived = 0f;
     public int resourceID = 1; //Apple = 1, Pumpkin = 2, Fish = 3 carrot = 4
 
     void Awake()
@@ -17,6 +18,9 @@ public class collectables : MonoBehaviour
         fishDestination = GameObject.FindGameObjectWithTag("Destination");
         playerMovementScript = player.GetComponent<playerMovementScript>();
         popSFXPlayer = GameObject.Find("ItemPop").GetComponent<AudioSource>();
+        if (resourceID == 3) {
+            Destroy(gameObject, 15);
+        }
     }
 
     void Update()
