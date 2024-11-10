@@ -1,51 +1,83 @@
-// using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.Mathematics;
+using Unity.VisualScripting;
+using UnityEngine;
 
-// public class SilhouetteController : MonoBehaviour
-// {
-//     public float difficulty = 3f;
-//     public int highRND = 1000;
-//     private int IDCount = 0;
-//     private Dictionary<int, Dictionary<string, float>> ActiveOrders = new Dictionary<int, Dictionary<string, float>>();
+public class SilhouetteController : MonoBehaviour
+{
 
-//     void makeOrder()
-//     {
-//         // Set a random amount of each within the range of the curent difficulty, increase the difficulty, add order to order list.
-//         Random rnd = new Random();
-//         private Dictionary<string, float> order = new Dictionary<string, float>();
-//         difficultyInc = difficultyInc + 0.25f;
-//         order.Add("fish", rnd.Next(0, difficulty));
-//         order.Add("carrot", rnd.Next(0, difficulty));
-//         order.Add("apple", rnd.Next(0, difficulty));
-//         order.Add("pumpkin", rnd.Next(0, difficulty));
-//         order.Add("timer", 60f);
-//         ActiveOrders.add(IDCount, order);
-//         Debug.Log("Added order: " + IDCount);
-//         IDCount += 1;
-//     }
+    public bool orderInProgress = false;
+    public int minItems = 1;
+    public int maxItems = 5;
+    private int orderSize;
+    private List<GameObject> orderContents = new List<GameObject>();
 
-//     void removeOrder(int ID)
-//     {
-//         // remove the specific order at current ID
-//         ActiveOrders.remove(ID);
-//         Debug.Log("Removed order: " + ID);
-//     }
+    //Orderable Items
+    public GameObject item1, item2, item3, item4;
 
-//     // Update is called once per frame
-//     void FixedUpdate()
-//     {
-//         // random chance of new guy showing up if there isn't 3 already
-//         Random rnd = new Random();
-//         if (rnd.Next(0, highRND) == highRND - 1 && ActiveOrders.Count <= 3) {
-//             makeOrder()
-//         }
-//         // decrement the timer on each order if it still has time, otherwise quit program
-//         foreach(KeyValuePair<int, Dictionary> order in ActiveOrders) {
-//             if (order.Key == "timer" && order.Value <= 0) {
-//                 Application.Quit();
-//             } 
-//             if (order.Key == "timer") {
-//                 order.Value = order.Value - 1f;
-//             }
-//         }
-//     }
-// }
+    void Awake()
+    {
+        GenerateOrder();
+    }
+
+    public void Update()
+    {
+
+    }
+
+    public void GenerateOrder()
+    {
+        if (orderInProgress == false)
+        {
+            orderSize = UnityEngine.Random.Range(minItems, maxItems);
+            for (int i = 0; i < orderSize; i++)
+            {
+                orderContents.Add(RandomizeItem());
+            }
+            Debug.Log(orderSize);
+            Debug.Log(orderContents);
+
+        }
+    }
+
+    public GameObject RandomizeItem()
+    {
+        int randItem = UnityEngine.Random.Range(1, 4);
+        switch (randItem)
+        {
+            case 1:
+                if (randItem == 1)
+                {
+                    return item1;
+                }
+                break;
+
+            case 2:
+                if (randItem == 2)
+                {
+                    return item2;
+                }
+                break;
+
+            case 3:
+                if (randItem == 3)
+                {
+                    return item3;
+                }
+                break;
+
+            case 4:
+                if (randItem == 4)
+                {
+                    return item4;
+                }
+                break;
+
+            default:
+                break;
+        }
+        return null;
+    }
+}

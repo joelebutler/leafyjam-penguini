@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 7
+  m_Radius: 35
 --- !u!114 &279675079102727959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1029187ee6d3701478612f9a6f6ef152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishSpeed: 0.5
   resourceID: 3
 --- !u!82 &9109177620550034278
 AudioSource:

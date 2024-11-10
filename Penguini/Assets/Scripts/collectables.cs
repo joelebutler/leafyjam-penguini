@@ -6,6 +6,7 @@ public class collectables : MonoBehaviour
     private playerMovementScript playerMovementScript;
     private AudioSource pickupSound;
     private GameObject fishDestination;
+    public float fishSpeed = 0.5f;
     public int resourceID = 1; //Apple = 1, Pumpkin = 2, Fish = 3 carrot = 4
 
     void Awake()
@@ -20,7 +21,7 @@ public class collectables : MonoBehaviour
     {
         if (resourceID == 3)
         {
-            transform.position = Vector2.Lerp(transform.position, fishDestination.transform.position, 1.0f * Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, fishDestination.transform.position, fishSpeed * Time.deltaTime);
         }
 
     }
