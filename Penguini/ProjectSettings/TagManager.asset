@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - Pumpkin
+  - Destination
   layers:
   - Default
   - TransparentFX

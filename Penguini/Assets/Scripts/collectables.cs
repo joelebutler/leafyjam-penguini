@@ -20,15 +20,18 @@ public class collectables : MonoBehaviour
     {
         if (resourceID == 3)
         {
-            transform.position = Vector2.Lerp(transform.position, fishDestination.transform.position, 10);
-            if (transform.position == fishDestination.transform.position)
-            {
-                Destroy(gameObject);
-            }
+            transform.position = Vector2.Lerp(transform.position, fishDestination.transform.position, 1.0f * Time.deltaTime);
         }
 
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Destination"))
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
