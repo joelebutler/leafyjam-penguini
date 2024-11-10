@@ -375,7 +375,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: b5f4bf4f20e9c4df0bfcac557c46b791, type: 3}
   m_Resource: {fileID: 8300000, guid: b5f4bf4f20e9c4df0bfcac557c46b791, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.513
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 0.94509804, b: 0.84313726, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.94509804, b: 0.84313726, a: 1}
-    m_PressedColor: {r: 1, g: 0.9323113, b: 0.8066038, a: 1}
+    m_HighlightedColor: {r: 0.99215686, g: 0.8745098, b: 0.63529414, a: 1}
+    m_PressedColor: {r: 0.99215686, g: 0.8745098, b: 0.63529414, a: 1}
     m_SelectedColor: {r: 1, g: 0.8745098, b: 0.63529414, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -965,7 +965,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 018e34920e6e54cc19f71840c0f2c283, type: 3}
   m_Resource: {fileID: 8300000, guid: 018e34920e6e54cc19f71840c0f2c283, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.674
+  m_Volume: 0.976
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1204,8 +1204,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 0.94509804, b: 0.84313726, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.94509804, b: 0.84313726, a: 1}
-    m_PressedColor: {r: 1, g: 0.9323113, b: 0.8066038, a: 1}
+    m_HighlightedColor: {r: 0.99215686, g: 0.8745098, b: 0.63529414, a: 1}
+    m_PressedColor: {r: 0.99215686, g: 0.8745098, b: 0.63529414, a: 1}
     m_SelectedColor: {r: 1, g: 0.8745098, b: 0.63529414, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

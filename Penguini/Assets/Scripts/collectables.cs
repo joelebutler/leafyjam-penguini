@@ -6,6 +6,7 @@ public class collectables : MonoBehaviour
     private playerMovementScript playerMovementScript;
     private AudioSource pickupSound;
     private GameObject fishDestination;
+    private AudioSource popSFXPlayer;
     public float fishSpeed = 0.5f;
     public int resourceID = 1; //Apple = 1, Pumpkin = 2, Fish = 3 carrot = 4
 
@@ -15,6 +16,7 @@ public class collectables : MonoBehaviour
         pickupSound = GetComponent<AudioSource>();
         fishDestination = GameObject.FindGameObjectWithTag("Destination");
         playerMovementScript = player.GetComponent<playerMovementScript>();
+        popSFXPlayer = GameObject.Find("ItemPop").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class collectables : MonoBehaviour
     {
         if (other.CompareTag("Player") && (Input.GetKey(KeyCode.Space)))
         {
+            popSFXPlayer.PlayOneShot(popSFXPlayer.clip, popSFXPlayer.volume);
             switch (resourceID)
             {
                 case 1:
