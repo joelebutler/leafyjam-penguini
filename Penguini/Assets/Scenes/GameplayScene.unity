@@ -449,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171148502}
   - component: {fileID: 171148501}
+  - component: {fileID: 171148503}
   m_Layer: 0
   m_Name: WorldBG_0
   m_TagString: Untagged
@@ -526,6 +527,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2084488343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171148503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171148500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e4e01b557434a149897ba647c1ccce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &191259148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,11 +4345,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.85
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.01
+      value: 6.09
       objectReference: {fileID: 0}
     - target: {fileID: 758915153936378295, guid: 29bccc47f78de4bce9fa08dee576beaa, type: 3}
       propertyPath: m_LocalPosition.z
