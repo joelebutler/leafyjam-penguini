@@ -6,140 +6,47 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[System.Serializable]
-public class Order
-{
-    public List<GameObject> ingredients = new();
-}
+
 public class SilhouetteController : MonoBehaviour
 {
-    public List<Order> listOrders = new();
-
-    private GameManager gameManager;
-    //private UIManager uiManager;
-
-    void Awake()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        //uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-    }
-
-    void Start()
-    {
-        GenerateRecipe(3);
-        Debug.Log(listOrders);
-        //uiManager.UpdateRecipieListUI();
-    }
-
-    public void GenerateRecipe(int nbReceipes)
-    {
-        for (int i = 0; i < nbReceipes; i++)
-        {
-            Order NewReceipie = new();
-            int nbIngredientsInDish = UnityEngine.Random.Range(1, 4);
-            for (int j = 0; j < nbIngredientsInDish; j++)
-            {
-                GameObject NewIngredient = TakeRandomIngredient();
-                NewReceipie.ingredients.Add(NewIngredient);
-            }
-            listOrders.Add(NewReceipie);
-        }
-    }
-
-    public void GenerateNewRecipe(int nbRecipies)
-    {
-        listOrders.RemoveAt(0);
-        GenerateRecipe(nbRecipies);
-        //uiManager.UpdateRecipieListUI();
-    }
-
-    GameObject TakeRandomIngredient()
-    {
-        GameObject Ingredient = gameManager.uncutItems[UnityEngine.Random.Range(0, gameManager.uncutItems.Length)];
-        return Ingredient;
-    }
-
-    public Order GetNextDishToDeliver()
-    {
-        Order Receipie = listOrders.First();
-        return Receipie;
-    }
-
-    public List<GameObject> GetAllIngredients(Order dishToPrepare)
-    {
-        return dishToPrepare.ingredients;
-    }
-
-
-    /*public bool orderInProgress = false;
-    public int minItems = 1;
-    public int maxItems = 5;
-    private int orderSize;
-    private List<GameObject> orderContents = new List<GameObject>();
-
-    //Orderable Items
-    public GameObject item1, item2, item3, item4;
+    public int minAsk, maxAsk, randAsk, item1Amount, item2Amount, item3Amount, item4Amount, decidedIndex;
 
     void Awake()
     {
         GenerateOrder();
+        Debug.Log(item1Amount + " " + item2Amount + " " + item3Amount + " " + item4Amount);
     }
 
-    public void Update()
+    void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            GenerateOrder();
+        }
     }
 
     public void GenerateOrder()
     {
-        if (orderInProgress == false)
+        for (int i = decidedIndex; i < 3; i++)
         {
-            orderSize = UnityEngine.Random.Range(minItems, maxItems);
-            for (int i = 0; i < orderSize; i++)
+            randAsk = UnityEngine.Random.Range(minAsk, maxAsk);
+            switch (decidedIndex)
             {
-                orderContents.Add(RandomizeItem());
+                case 0:
+                    item1Amount = randAsk;
+                    break;
+                case 1:
+                    item2Amount = randAsk;
+                    break;
+                case 2:
+                    item3Amount = randAsk;
+                    break;
+                case 3:
+                    item4Amount = randAsk;
+                    break;
+                default:
+                    break;
             }
-            Debug.Log(orderSize);
-            Debug.Log(orderContents);
         }
     }
-
-    public GameObject RandomizeItem()
-    {
-        int randItem = UnityEngine.Random.Range(1, 4);
-        switch (randItem)
-        {
-            case 1:
-                if (randItem == 1)
-                {
-                    return item1;
-                }
-                break;
-
-            case 2:
-                if (randItem == 2)
-                {
-                    return item2;
-                }
-                break;
-
-            case 3:
-                if (randItem == 3)
-                {
-                    return item3;
-                }
-                break;
-
-            case 4:
-                if (randItem == 4)
-                {
-                    return item4;
-                }
-                break;
-
-            default:
-                break;
-        }
-        return null;
-    }*/
 }
